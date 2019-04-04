@@ -2,7 +2,7 @@ var fs = require("fs");
 var globalConfig = require("./config");
 var controllerSet = [];
 var pathMap = new Map();
-var files = fs.readdirSync(globalConfig["web_path"]);
+var files = fs.readdirSync('./' + globalConfig["web_path"]);
 
 for(var i = 0; i < files.length; i++){
     var temp = require("./" + globalConfig["web_path"]  + "/" + files[i]);

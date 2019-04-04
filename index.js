@@ -7,7 +7,7 @@ var multer = require("multer");                          //解析文件上传的
 var app = new express();
 var uploadSingle = multer({dest:"./file/"});
 
-app.use(express.static(globalConfig["page_path"]));
+app.use(express.static('./' + globalConfig["page_path"]));
 app.use(cookie());
 
 
