@@ -7,7 +7,8 @@ function getAllStudent(request, response) {
         var head = {"Access-Control-Allow-Origin":"*",
             "Access-Control-Allow-Methods":"GET",
             "Content-Type":"text/html; charset=utf-8",
-            "Access-Control-Allow-Headers":"x-request-with, content-type"}
+            "Access-Control-Allow-Headers":"x-request-with, content-type"};
+        console.log(result);
         response.writeHead(200,head);
         response.write(JSON.stringify(result));
         response.end();
