@@ -2,11 +2,10 @@ var fs = require("fs");
 var globalConfig = require("./config");
 var controllerSet = [];
 var pathMap = new Map();
-var files = fs.readdirSync('./' + globalConfig["web_path"]);
-console.log(globalConfig["web_path"]);
+var files = fs.readdirSync('./web');
 
 for(var i = 0; i < files.length; i++){
-    var temp = require("./" + globalConfig["web_path"]  + "/" + files[i]);
+    var temp = require("./web"  + "/" + files[i]);
     if(temp.path) {
         for(var [key, value] of temp.path) {
             if(pathMap.get(key) == null){
