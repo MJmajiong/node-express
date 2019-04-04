@@ -1,4 +1,4 @@
-var studentDao = require("../dao/studentDao");
+var studentDao = require("../Dao/studentDao");
 var url = require("url");
 var path = new Map();
 
